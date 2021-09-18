@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="Jefferson Eduardo"/>
+    <title>minha conta</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="index.html">Cantinho do Pet</a>
+        <nav>
+            <ul class="menu">
+                <li class="item-atendimento">
+                    <a href="#">
+                        <span class="ani">
+                            atendimento
+                        </span>
+                    </a>
+                </li>
+                
+                <li class="item-login">
+                    <a href="acessar.html">
+                        <span class="item-login ani">
+                            minha conta
+                        </span>
+                        <img class="icon-login ani" src="assets/image/login-icon.png" alt="">
+                    </a>
+                </li>
+
+                <li class="item-carrinho">
+                    <a href="#">
+                        <span class="ani">
+                            meu carrinho
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--<img src="image/fundo_hp1.png" alt="">-->
+
+    <!--LOGIN DE USUÁRIO-->
+    <div class="container">
+        <div class="login usuario">
+            <div>
+                    <img src="assets/image/avatar_medico.jpg" alt="Logo Cantinho do pet">
+            </div>
+
+            <form action="" method="POST" id="form-login">
+                <div>
+                    <input id="email" type="email" name="email" placeholder="Digite o seu e-mail" required>
+                </div>
+        
+                <div>
+                    <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                </div>
+        
+                <div>
+                    <button id="btn-submit">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!--CADASTRO DE USUÁRIO-->
+        <div class="register usuario">
+            <form action="assets/php/cadastro_user.php" method="POST" id="form-login">
+                <div>
+                    <label class="lab" for="User">
+                        <strong>Nome e sobrenome</strong>
+                    </label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" alt="Digite seu nome" autocomplete="off" required>
+                </div>
+                
+                <div>
+                    <label class="lab" for="User">
+                        <strong>CPF</strong>
+                    </label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" alt="Digite seu CPF" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required>
+                </div>
+
+                <div>
+                    <label class="lab" for="User">
+                        <strong>E-mail</strong>
+                    </label>
+                    <input id="email" type="email" name="email" placeholder="Digite o seu e-mail" alt="Digite seu e-mail" required>
+                </div>
+                
+                <div>
+                    <label class="lab" for="User">
+                        <strong>Confirme o e-mail</strong>
+                    </label>
+                    <input id="email" type="email" name="email_conf" placeholder="Digite o seu e-mail" alt="Digite seu e-mail" required>
+                </div>
+
+                <div>
+                    <label class="lab" for="User">
+                        <strong>Senha</strong>
+                    </label>
+                    <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div>
+                    <label class="lab" for="User">
+                        <strong>Confirme a senha</strong>
+                    </label>
+                    <input id="password" type="password" name="senha_conf" placeholder="Digite sua senha" required>
+                </div>
+        
+                <div>
+                    <button id="btn-submit">
+                        Cadastrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/validacao_cpf.js"></script>
+</body>
+</html>

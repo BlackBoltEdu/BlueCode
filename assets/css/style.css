@@ -1,0 +1,153 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+	background: rgba(0, 0, 0, 0.9);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 20px;
+	font-size: 13px;
+	font-family: 'Roboto';
+}
+
+.logo{
+	font-size: 20px;
+}
+
+.menu{
+	display: flex;
+}
+
+.menu li{
+	margin-left: 10px;
+	max-width: 300px;
+}
+
+.menu li a{
+	padding: 5px;
+}
+
+.icon-login{
+	height: 1.2em;
+	width: 1.1em;
+	margin-left: -5px;
+	position: absolute;
+}
+
+.item-login{
+	padding-right: 15px;
+}
+
+.item-login:hover{
+	color: rgb(158, 152, 152);
+	transition: 0.3s;
+}
+
+li{
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+	color: white;
+	height: 30px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+span:hover{
+	color: rgb(158, 152, 152);
+	transition: 0.3s;
+}
+
+.item-carrinho{
+	border: 0px;
+}
+
+/*Ajustando tamanho do seleteor que contem o formulário de login*/
+.container{
+	margin: 150px;
+	margin-left: 50vh;
+}
+
+/*FORMATAÇÃO SELETORES*/
+.login, 
+.register{
+	width: 100%;
+	max-width: 450px;
+	max-height: 400px;
+	display: inline-block;
+}
+
+/*LIMITANDO E ESTILIZANDO AVATAR DE LOGIN*/
+.usuario img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%
+}
+
+/*Margem do formulario*/
+#form-login{
+	margin: 20px;
+}
+
+.lab{
+	display: block;
+	font-family: 'Roboto';
+	font-size: 15px;
+}
+
+/*ESTILIZANDO INPUT'S*/
+.usuario input{
+	width: 100%;
+	height: 40px;
+	padding: 10px 10px;
+	margin: 5px 0px 10px 0px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	outline: none;
+}
+
+.usuario input:focus{
+	border: 1px solid rgb(255, 101, 0);;
+}
+
+/*ESTILIZANDO O BUTTON*/
+.usuario button{
+	width: 100%;
+	padding: 10px 5px;
+	margin: 10px 0px 0px 0px;
+	border: none;
+	outline: none;
+	background-color: rgb(255, 101, 0);
+	color: white;
+}
+
+/*ALTERAÇÃO DE PROPRIEDADES AO PASSAR O MOUSE*/
+.usuario button:hover{
+	background-color: rgb(175, 89, 31);
+	cursor: pointer;
+}
+
+/*ALTERAÇÃO DE PROPRIEDAS AO CLICAR SOBRE O BUTTON*/
+.usuario button:active{
+	background-color: rgb(124, 57, 12);
+	cursor: pointer;
+}

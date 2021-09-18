@@ -1,0 +1,69 @@
+/*Ajustando tamanho do seleteor que contem o formulário de login*/
+.login{
+	width: 100%;
+	max-width: 300px;
+	margin: auto;
+    text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	border: solid 1px rgba(0, 0, 0, .2);
+	background-color: #FFF
+}
+
+/*LIMITANDO E ESTILIZANDO AVATAR DE LOGIN*/
+.login img{
+	width: 50%;
+	border-radius: 50%
+}
+
+.login form{
+	margin: 20px;
+}
+
+/*ESTILIZANDO INPUT'S*/
+.login input{
+	width: 100%;
+	padding: 10px 5px;
+	margin-top: 10px;
+	border: none;
+	outline: none;
+}
+
+/*LINHA ESTILIZADA DOS INPUT'S*/
+.login input{
+	border-bottom-color: rgb(148, 137, 137);
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+/*FEEDBACK VISUAL NA COR DA LINHA DO INPUT, QUANDO FOCADO*/
+.login input:focus{
+	border-bottom-color: rgb(46, 61, 110);
+}
+
+/*ESTILIZANDO O BUTTON*/
+.login button{
+	width: 100%;
+	padding: 10px 5px;
+	margin: 10px 0px 0px 0px;
+	border: none;
+	outline: none;
+}
+
+/*ESTILO DO BOTÃO*/
+.login button{
+	background-color: rgb(46, 61, 110);
+	color: #FFF;
+}
+
+/*ALTERAÇÃO DE PROPRIEDADES AO PASSAR O MOUSE*/
+.login button:hover{
+	background-color: rgb(27, 35, 61);
+	cursor: pointer;
+}
+
+/*ALTERAÇÃO DE PROPRIEDAS AO CLICAR SOBRE O BUTTON*/
+.login button:active{
+	background-color: rgb(54, 62, 94);
+	cursor: pointer;
+}
