@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="author" content="Jefferson Eduardo"/>
-    <title>minha conta</title>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css"/>
 </head>
-<body>
+<body> 
     <header class="header">
         <a class="logo" href="index.html">Cantinho do Pet</a>
         <nav>
@@ -22,7 +22,7 @@
                 </li>
                 
                 <li class="item-login">
-                    <a href="acessar.html">
+                    <a href="login.html">
                         <span class="item-login ani">
                             minha conta
                         </span>
@@ -40,36 +40,10 @@
             </ul>
         </nav>
     </header>
-
-    <!--<img src="image/fundo_hp1.png" alt="">-->
-
-    <!--LOGIN DE USUÁRIO-->
-    <div class="container">
-        <div class="login usuario">
-            <div>
-                    <img src="assets/image/avatar_medico.jpg" alt="Logo Cantinho do pet">
-            </div>
-
-            <form action="" method="POST" id="form-login">
-                <div>
-                    <input id="email" type="email" name="email" placeholder="Digite o seu e-mail" required>
-                </div>
-        
-                <div>
-                    <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
-                </div>
-        
-                <div>
-                    <button id="btn-submit">
-                        Entrar
-                    </button>
-                </div>
-            </form>
-        </div>
-
+      
         <!--CADASTRO DE USUÁRIO-->
         <div class="register usuario">
-            <form action="assets/php/cadastro_user.php" method="POST" id="form-login">
+            <form action="../php/cadastro_user.php" method="POST" id="form-login">
                 <div>
                     <label class="lab" for="User">
                         <strong>Nome e sobrenome</strong>
@@ -120,8 +94,7 @@
             </form>
         </div>
     </div>
-
-    <script src="assets/javascript/script.js"></script>
-    <script src="assets/javascript/validacao_cpf.js"></script>
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/validacao_cpf.js"></script>
 </body>
 </html>

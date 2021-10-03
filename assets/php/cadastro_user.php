@@ -4,21 +4,21 @@
 
     $con = new Conexao();
     $user = new User ();
-    $user ->setNome($_POST['nome']);
-    $user ->setCpf($_POST['cpf']);
-    $user ->setEmail($_POST['email']);
-    $user ->setSenha(MD5($_POST['senha']));
+    $user ->setNome(addslashes($_POST['nome']));
+    $user ->setCpf(addslashes($_POST['cpf']));
+    $user ->setEmail(addslashes($_POST['email']));
+    $user ->setSenha(addslashes(MD5($_POST['senha'])));
 
     //verificar se o e-mail já está cadastrado no banco
-    $sql ="select id from usuario where email = :email";
+    $sql ="SELECT id FROM usuario WHERE email = :email";
 
     $inserir = $con -> getPDO() -> prepare($sql);
     $inserir -> bindValue (':email' , $user->getEmail());
     $inserir->execute();
     if($inserir->rowCount() > 0){
-        return false;
+        echo "<script>alert('Usuário já cadastrado'); location.href='../view/cadastro.html'; </script>";
     }else{
-        $sql ="insert into usuario (nome, cpf, email, senha) values (:nome,:cpf,:email,:senha)";
+        $sql ="INSERT into usuario (nome, cpf, email, senha) VALUES (:nome,:cpf,:email,:senha)";
 
         $inserir = $con -> getPDO() -> prepare($sql);
         $inserir -> bindValue (':nome' , $user->getNome());
