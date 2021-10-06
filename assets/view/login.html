@@ -8,7 +8,7 @@
     <title>minha conta</title>
     <link rel="stylesheet" href="../css/style.css"/>
 </head>
-<body>
+<body class="loginht">
     <header class="header">
         <a class="logo" href="index.html">Cantinho do Pet</a>
         <nav>
@@ -43,19 +43,21 @@
     <!--<img src="image/fundo_hp1.png" alt="">-->
 
     <!--LOGIN DE USUÁRIO-->
-    <div class="container">
         <div class="login usuario">
-            <div>
-                    <img src="../image/avatar_medico.jpg" alt="Logo Cantinho do pet">
-            </div>
-
             <form action="../php/logar.php" method="POST" id="form-login">
                 <div>
-                    <input id="email" type="email" name="email" placeholder="Digite o seu e-mail" required>
+                    <img src="../image/avatar_medico.jpg" alt="Logo Cantinho do pet">
+                </div>
+                <div class="input">
+                    <input required id="email" type="email" name="email">
+                    <label>E-mail</label>
+                    <span class="error"></span>
                 </div>
         
-                <div>
-                    <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
+                <div class="input">
+                    <input required id="password" type="password" name="senha">
+                    <label>Senha</label>
+                    <span class="error"></span>
                 </div>
         
                 <div>
@@ -64,10 +66,8 @@
                     </button>
                 </div>
             </form>
-        </div>
 
 
-    <script src="assets/javascript/script.js"></script>
-    <script src="assets/javascript/validacao_cpf.js"></script>
+    <script src="../javascript/script.js"></script>
 </body>
 </html>
