@@ -26,6 +26,6 @@
         $inserir -> bindValue (':email' , $user->getEmail());
         $inserir -> bindValue (':senha' , $user->getSenha());
         $inserir->execute();
-        return true;
+        echo "<script>alert('Usuário Cadastrado com sucesso'); location.href='../view/login.html'; </script>";
     }
 ?>

@@ -1,12 +1,9 @@
-@font-face {
-	font-family: 'Roboto';
-	src: url('../fonts/Roboto-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
 
 *{
 	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
 body, li{
@@ -17,23 +14,37 @@ body, li{
 
 a {
 	text-decoration: none;
-	color: white;
+	color: #fafafa;
 	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.icon a:hover{
+	color: #575ee0;
+	transition: all 0.5s;
 }
 
 .header{
-	background: rgba(0, 0, 0, 0.9);
+	background: #a4a8f4;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px 20px;
 	font-size: 13px;
-	font-family: 'Roboto';
+	
 }
 
 .logo{
-	font-size: 20px;
+	font-size: 24px;
 }
+
+ .logo .fa {
+	font-size: 30px;
+	width: 35px;
+	color: #7b64c7;
+}
+
 
 .menu{
 	display: flex;
@@ -60,20 +71,20 @@ a {
 }
 
 .item-login:hover{
-	color: rgb(158, 152, 152);
+	color: #575ee0;
 	transition: 0.3s;
 }
 
 li{
 	border-right: 1px solid rgba(255, 255, 255, 0.5);
-	color: white;
+	color: #fafafa;
 	height: 30px;
 	padding: 5px;
 	box-sizing: border-box;
 }
 
 span:hover{
-	color: rgb(158, 152, 152);
+	color: #575ee0;
 	transition: 0.3s;
 }
 
@@ -99,8 +110,8 @@ div.input{
 	position: relative;
 }
 
-input,
-button{
+input
+{
 	/*Reset de aparencia do input*/
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -119,15 +130,19 @@ input ~ label{
 	position: absolute;
 	top: 10px;
 	left: 6px;
-	color: rgba(0,0,0, 0.7);
+	color: rgba(0, 0, 0, 0.7);
 	transition: .4s;
+}
+
+label{
+	font-weight: 800;
 }
 
 input:focus ~ label,
 input:valid ~ label{
-	transform: translateY(-27px);
-	font-size: 0.8em;
-	letter-spacing: 0.1em;
+	transform: translateY(-29px);
+	font-size: 0.83em;
+	letter-spacing: 0.2em;
 }
 
 div.input span.error{
