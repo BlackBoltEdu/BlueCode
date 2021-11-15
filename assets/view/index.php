@@ -1,4 +1,5 @@
 <?php
+    
     session_start();
     if(isset($_SESSION['id']) && is_array($_SESSION["id"])){
         $nivel = $_SESSION['id'][1];

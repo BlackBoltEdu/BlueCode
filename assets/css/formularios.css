@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form{
+	width:  100%;
+	max-width:  26vw;
+	margin: 32px auto;
+	padding: 32px 64px;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto';
+	border-radius: 5px;
+}
+
+.lab{
+	font-size: 15px;
+}
+
+.container input{
+	width: 100%;
+	height: 40px;
+	padding: 10px 10px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	outline: none;
+    margin-bottom: 15px;
+}
+
+.container input:focus{
+	border: 1px solid #575ee0;
+}
+
+/*ESTILIZANDO O BUTTON*/
+.container button{
+	width: 100%;
+	padding: 10px 5px;
+	margin: 0px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	background-color: #575ee0;
+	color: white;
+}
+
+/*ALTERAÇÃO DE PROPRIEDADES AO PASSAR O MOUSE*/
+.container button:hover{
+	background-color: #373eb1;
+	cursor: pointer;
+}
+
+/*ALTERAÇÃO DE PROPRIEDAS AO CLICAR SOBRE O BUTTON*/
+.container button:active{
+	background-color: #6f75f3;
+	cursor: pointer;
+}
+
+h1{
+    font-family: 'Roboto';
+    font-weight: 800;
+}
+
+header{
+    background-color: #575ee0;
+    display: flex;
+    justify-content: center;
+    height: 6vh;
+    align-items: center;
+}
