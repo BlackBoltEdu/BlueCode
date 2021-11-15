@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #1b2029;
+    color:#202020;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+main h1 {
+    color: rgb(255, 106, 0);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+main form input {
+    background: #eceaea;
+    width: 300px;
+    height: 30px;
+    padding: 0 0.5rem;
+    outline: none;
+    color: rgb(49, 49, 49);
+    font-size: 0.9rem;
+    border: 1px solid#373838;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+ main form input:focus {
+     border: 1px solid rgb(255, 101, 0);
+ }
+
+button {
+    cursor: pointer;
+    margin-top: 2rem;
+    border: none;
+    background: rgb(246, 132, 50);
+    width: 100px;
+    height: 30px;
+    border-radius: 32px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background:rgb(250, 114, 17);
+}
+
+main form select{
+    background: #fafafa;
+    width: 300px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #040B18;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+main form select:focus {
+    border: 1px solid rgb(255, 101, 0);
+}
+
+main.container {
+    background: #fafafa;
+    max-width: 600px;
+    min-height: 50vh;
+    padding: 3rem;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}

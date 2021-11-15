@@ -5,5 +5,4 @@ function mascara_cpf(){
     }else if(cpf.value.length == 11){
         cpf.value += "-";
     }
-    
 }

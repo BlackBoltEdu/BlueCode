@@ -4,6 +4,7 @@
         private $cpf;
         private $email;
         private $senha;
+        private $tipoUser;
         
         //Get's e Setter's NOME COMPLETO
         public function getNome(){
@@ -40,6 +41,15 @@
 
         public function setSenha($senha){
             $this->senha = $senha;
+        }
+
+        //Get's e Setter's TIPO DE USUÁRIO
+        public function getTipoUser(){
+            return $this->tipoUser;
+        }
+
+        public function setTipoUser($tipoUser){
+            $this->senha = $tipoUser;
         }
     }
 ?>
