@@ -1,0 +1,1 @@
+Crie o banco de dados no php my admin como cantinhodopet
