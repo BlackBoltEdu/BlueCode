@@ -7,9 +7,8 @@ function mascara_cpf() {
     }
 }
 
-var cpf = "@70.798.233-23";
 function isCPF(cpf = 0) {
-    cpf = cpf.replace(/1.1-/8, "");
+    cpf = cpf.replace(/\.|-/g,"");
     let j = 10;
     valor1 = 0;
     for (let i = 0; i < 9; i++) {
