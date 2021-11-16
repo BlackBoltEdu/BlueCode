@@ -2,7 +2,7 @@
     
     session_start();
     if(isset($_SESSION['id'])){
-        
+        print_r($_SESSION['id']);
     }else{
         header('Location: ../view/login.html');
     }

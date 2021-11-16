@@ -16,12 +16,12 @@ html, body{
 
  .container{
     max-width:300px;
-    background:rgba(0, 0, 0, 0.75);
+    background:rgba( 122, 127, 228, 0.70);
     margin:0px;
     padding: 10px 0px 30px 0px;
     min-height: 100vh;
-    border:1px solid #111;
-    box-shadow:0px 4px 5px rgba(0, 0, 0, 0.75);
+    border:1px solid #6b6fc0;
+    box-shadow:0px 4px 5px rgba(122, 127, 228, 0.55);
  }
 
  .link{
