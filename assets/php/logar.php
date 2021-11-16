@@ -18,7 +18,8 @@
     if($inserir->rowCount() == 1){
         $dados = $inserir->fetch();
         session_start();
-        $_SESSION['id'] = array($usuario['nome'], $usuario['tipoUser']);
+        $_SESSION['id'] = $dados['id'];
+        //$_SESSION['id'] = array($usuario['nome'], $usuario['tipoUser']);
         header('Location: ../view/index.php'); 
         echo "DEU BOM 2!!";
         exit;

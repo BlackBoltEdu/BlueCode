@@ -1,8 +1,8 @@
 <?php
     
     session_start();
-    if(isset($_SESSION['id']) && is_array($_SESSION["id"])){
-        $nivel = $_SESSION['id'][1];
+    if(isset($_SESSION['id'])){
+        
     }else{
         header('Location: ../view/login.html');
     }
