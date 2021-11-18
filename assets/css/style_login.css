@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg,#a4a8f4, #8185d1);	
+
+}
+
+body, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	
+}
+
+ a{
+	text-decoration: none;
+	color: #fafafa;
+	font-family: 'Poppins' sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+ a:hover{
+	color: #575ee0;
+	transition: all 0.5s;
+}
+
+.header{
+	background: #a4a8f4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 20px;
+	font-size: 13px;
+}
+
+.logo{
+	font-size: 24px;
+}
+
+.logo .fa {
+	font-size: 30px;
+	width: 35px;
+	color: #7b64c7;
+}
+
+
+.menu{
+	display: flex;
+}
+
+.menu li{
+	margin-left: 10px;
+	max-width: 300px;
+}
+
+.menu li a{
+	padding: 5px;
+}
+
+.icon-login{
+	height: 1.2em;
+	width: 1.1em;
+	margin-left: -5px;
+	position: absolute;
+}
+
+.item-login{
+	padding-right: 15px;
+}
+
+.item-login:hover{
+	color: #575ee0;
+	transition: 0.3s;
+}
+
+li{
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+	color: #fafafa;
+	height: 30px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+header span:hover{
+	color: #575ee0;
+	transition: 0.3s;
+}
+
+.item-carrinho{
+	border: 0px;
+}
+
+/*Ajustando tamanho do seleteor que contem o formulário de login*/
+
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 8.5%;
+}
+
+main.container {
+    background: #fafafa;
+    min-height: 51vh;
+	min-width: 28vw;
+    padding: 3rem;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 8px;
+	position: relative;
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+main h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 2.5px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg,#a4a8f4, #7a7fe4);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+	justify-content: space-around;
+}
+
+.input-field {
+    position: relative;
+	min-width: fit-content;
+}
+
+form .input-field:first-child{
+    margin-bottom: 4rem;
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg,#a4a8f4, #7a7fe4);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin:left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7); 
+	border: none;
+	background: transparent;
+	width: 100%;
+	height: 20px;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+form #botao {
+    margin-top: 5rem;
+    background: #a4a8f4;
+    cursor: pointer;
+    color: #fafafa;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: 3.2rem;
+	border: none;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	
+}
+
+form #cadastro {
+	margin-top: 5rem;
+    background: #fafafa;
+    cursor: pointer;
+    color: #7e83da;
+	border: 1px solid #7e83da;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: 3rem;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+form #cadastro:hover{
+	letter-spacing: 0.5px;
+    background: #7e83da;
+	color: #fafafa;
+}
+
+
+form #botao:hover {
+    letter-spacing: 0.5px;
+    background: #7e83da;
+
+}
+
+.botoes{
+	display: flex;
+	justify-content: space-between;
+
+	
+}

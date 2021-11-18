@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg,#a4a8f4, #7a7fe4);
+    background-repeat: no-repeat;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+
+/*COMEÇO DO FORMULÁRIO*/
+.center{
+    display: flex;
+    justify-content: center;  /*CENTRALIZAÇÃO DO FORMULÁRIO EM RELAÇÃO AO BODY*/
+    align-items: center;
+}
+
+.container{
+    background: #fafafa;
+    min-width: 35vw;
+    max-height: 92vh;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    margin-top: 30px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);            /*FORMATAÇÃO DO CONTAINER || POSIÇÕES*/
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    bottom: 855px;
+    left: 125px;
+}
+
+main h2{
+    font-weight: 600;
+    margin-bottom: 2rem;                /*FORMATAÇÃO DO TITULO H2*/
+    color: #7a7fe4;
+}
+
+form{
+    display: flex;
+    flex-direction: column;   /*FORMATAÇÃO DO FORMULÁRIO PARA DEIXAR OS COMPONENTES UM ABAIXO DO OUTRO*/
+}
+form .input-field{
+    margin-bottom: 1rem;      /*ESPAÇAMENTO DOS INPUTS*/  
+}
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;                           /*LINHA DE BAIXO COM O EFEITO DE CORRER*/
+    bottom: 15px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 15px;                                            /*LINHA DE BAIXO COM O EFEITO DE CORRER*/
+    left: 0;
+    background: linear-gradient(45deg,#a4a8f4, #7a7fe4);
+    transform: scaleX(0);
+    transition: all .5s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);                                   /*TRANSIÇÃO DO EFEITO*/
+}
+
+.input-field{
+    border: none;
+    position: relative;
+    display: flex;                                        /*RESETANDO FORMATAÇÃO DOS INPUTS PARA MELHOR MANIPULAÇÃO*/
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;                    /*FORMATAÇÃO E ESTILIZAÇÃO DOS INPUTS*/
+    color: rgba(0, 0, 0, 0.7);
+    background: transparent;
+    font-weight: 300;
+}
+
+.input-field label{
+    color:#7a7fe4;                     /*ESTILIZAÇÃO DO LABEL*/
+    font-weight: 300;
+    margin-bottom: 0.7rem;
+
+}
+
+.input-field input::placeholder{
+    color: rgba(0, 0, 0, 0.5);          /*ESTILIZAÇÃO DO PLACEHOLDER*/
+    font-weight: 300;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;   
+    font-weight: 300;                     /*POSICIONAMENTO DOS BOTÕES*/
+    position: relative;                   
+    bottom: 25px;
+}
+
+.botao{
+    margin-top: 2rem;
+    padding: 0.7rem;
+    background: linear-gradient(to left, #a4a8f4, #7a7fe4);      /*FORMATAÇÃO E EFEITOS DO BOTÃO CADASTRAR*/
+    cursor: pointer;
+    color: #fafafa;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.botao:hover{
+    color: #fafafa;
+    background: linear-gradient(to right, #a4a8f4, #7a7fe4);   /*EFEITO HOVER DO BOTÃO DE CADASTRO*/
+}
+
+.reset {
+    margin-top: 2rem;
+    padding: 0.6rem;
+    background: #fafafa;
+    cursor: pointer;                           /*FORMATAÇÃO E EFEITOS DO BOTÃO REDEFINIR*/
+    color: #7a7fe4;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: all 0.3s;
+    border: solid 1px #7a7fe4;
+}
+
+.reset:hover{
+    color: #fafafa;
+    background: linear-gradient(to left, #a4a8f4,#7a7fe4);  /*EFEITO HOVER DO BOTÃO DE REDEFINIR*/
+    border: none;
+}
+
+select{
+    outline: none;
+    color: #7a7fe4;             /*ESTILIZAÇÃO DO SELECT DO CARGO*/
+    background: transparent;
+    font-weight: 300;
+}
+
+select option{
+    background: #7a7fe4;
+    color: #fafafa;         /*ESTILIZAÇÃO DAS OPÇÕES DO CAMPO DE CARGO*/
+    font-weight: 300;
+}
+/* FIM DO FORMULÁRIO*/
+
+
+
+/*COMEÇO DA SIDEBAR*/
+
+
+
+ a{
+    text-decoration: none;
+    color:#fafafa;              /*ESTILIZAÇÃO DO NOMES DO MENU*/
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 300;
+ }
+ 
+ 
+ .container-side{
+    max-width:250px;
+    background:rgba(84, 88, 179, 0.7);
+    margin:0px;                                  /*ESTILIZAÇÃO DA SIDE BAR*/
+    padding: 10px 0px 25px 0px;
+    min-height: 100vh;
+    box-shadow:0px 4px 5px rgba(0, 0, 0, 0.4); 
+}
+ 
+ .link{
+    font-size:16px;
+    font-weight:300;
+    text-align:center;
+    position:relative;
+    height:40px;          /*ESTILIZAÇÃO DOS LINKS DA SIDEBAR*/
+    line-height:40px;
+    margin-top:30px;
+    overflow:hidden;
+    width:90%;
+    margin-left:5%;
+    cursor:pointer;
+ }
+ 
+ .link:after{
+    content: '';
+    position:absolute;
+    width:80%;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);  /*EFEITO DA LINHA NOS NOMES*/
+    bottom:50%;
+    left:-100%;
+    transition-delay: all 0.5s;
+    transition: all 0.5s;
+ }
+ 
+ .link:hover:after,
+ .link.hover:after{                     /*EFEITO CAMBALHOTA*/
+    left:100%;
+ }
+ 
+ .link .texto{
+    text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+    transition:all 0.75s;                                  /*EFEITO CAMBALHOTA TRANSIÇÃO*/   
+    transform:translateY(100%) translateZ(0);
+    transition-delay:all 0.25s;
+ }
+ 
+ .link:hover .texto,
+ .link.hover .texto{
+    text-shadow:0px -40px 0px rgba(255, 255, 255, 0);  /*EFEITO HOVER DA TRANSIÇÃO DA CAMBALHOTA*/
+    transform:translateY(0%) translateZ(0) scale(1.1);
+    font-weight:600;
+ }
+/*FIM DA SIDE BAR*/

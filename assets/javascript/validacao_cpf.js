@@ -26,7 +26,7 @@ function isCPF(cpf = 0) {
     } else {
         let j = 2;
         for (let i = 0; i < 10; i++) {
-            valori += cpf[i] * j;
+            valor1 += cpf[i] * j;
             j++;
             if (i = 7) {
                 valor1 = (valor1 * 10) % 11;

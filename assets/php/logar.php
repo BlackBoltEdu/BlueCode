@@ -20,8 +20,7 @@
         session_start();
         $_SESSION['id'] = $dados['id'];
         //$_SESSION['id'] = array($usuario['nome'], $usuario['tipoUser']);
-        header('Location: ../view/index.php'); 
-        echo "DEU BOM 2!!";
+        header('Location: ../view/index.php');
         exit;
     }else{
         echo "DEU RUIM!!!";
