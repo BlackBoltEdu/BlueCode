@@ -18,6 +18,74 @@ body{
 }
 
 
+/*COMEÇO DA SIDEBAR*/
+
+a{
+    text-decoration: none;
+    color:#fafafa;              /*ESTILIZAÇÃO DO NOMES DO MENU*/
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 300;
+ }
+ 
+ 
+ .container-side{
+    max-width: 250px;
+    background:rgba(84, 88, 179, 0.7);
+    margin:0px;                                  /*ESTILIZAÇÃO DA SIDE BAR*/
+    padding: 10px 0px 25px 0px;
+    min-height: 100vh;
+    box-shadow:0px 4px 5px rgba(0, 0, 0, 0.4); 
+}
+ 
+ .link{
+    font-size:16px;
+    font-weight:300;
+    text-align:center;
+    position:relative;
+    height:40px;          /*ESTILIZAÇÃO DOS LINKS DA SIDEBAR*/
+    line-height:40px;
+    margin-top:30px;
+    overflow:hidden;
+    width:90%;
+    margin-left:5%;
+    cursor:pointer;
+ }
+ 
+ .link:after{
+    content: '';
+    position:absolute;
+    width:80%;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);  /*EFEITO DA LINHA NOS NOMES*/
+    bottom:50%;
+    left:-100%;
+    transition-delay: all 0.5s;
+    transition: all 0.5s;
+ }
+ 
+ .link:hover:after,
+ .link.hover:after{                     /*EFEITO CAMBALHOTA*/
+    left:100%;
+ }
+ 
+ .link .texto{
+    text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
+    transition:all 0.75s;                                  /*EFEITO CAMBALHOTA TRANSIÇÃO*/   
+    transform:translateY(100%) translateZ(0);
+    transition-delay:all 0.25s;
+ }
+ 
+ .link:hover .texto,
+ .link.hover .texto{
+    text-shadow:0px -40px 0px rgba(255, 255, 255, 0);  /*EFEITO HOVER DA TRANSIÇÃO DA CAMBALHOTA*/
+    transform:translateY(0%) translateZ(0) scale(1.1);
+    font-weight:600;
+ }
+/*FIM DA SIDE BAR*/
+
+
 /*COMEÇO DO FORMULÁRIO*/
 .center{
     display: flex;
@@ -29,14 +97,14 @@ body{
     background: #fafafa;
     min-width: 35vw;
     max-height: 92vh;
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 1.5rem 2rem;
     margin-top: 30px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);            /*FORMATAÇÃO DO CONTAINER || POSIÇÕES*/
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    bottom: 855px;
-    left: 125px;
+    bottom: 95vh;
+    left: 7vw;
 }
 
 main h2{
@@ -49,9 +117,11 @@ form{
     display: flex;
     flex-direction: column;   /*FORMATAÇÃO DO FORMULÁRIO PARA DEIXAR OS COMPONENTES UM ABAIXO DO OUTRO*/
 }
+
 form .input-field{
     margin-bottom: 1rem;      /*ESPAÇAMENTO DOS INPUTS*/  
 }
+
 .input-field .underline::before{
     content: '';
     position: absolute;
@@ -163,73 +233,68 @@ select option{
 }
 /* FIM DO FORMULÁRIO*/
 
+/*RESPONSIVIDADE*/
+@media only  screen and (max-width: 2000px){
+    
+    .botoes{               
+        bottom: 0vh;
+    }
 
+    .container{ 
+        bottom: 95vh;
+        left: 7vw;
+        min-height: 75vh;
+    }
 
-/*COMEÇO DA SIDEBAR*/
-
-
-
- a{
-    text-decoration: none;
-    color:#fafafa;              /*ESTILIZAÇÃO DO NOMES DO MENU*/
-    letter-spacing: 0.5px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    font-weight: 300;
- }
- 
- 
- .container-side{
-    max-width:250px;
-    background:rgba(84, 88, 179, 0.7);
-    margin:0px;                                  /*ESTILIZAÇÃO DA SIDE BAR*/
-    padding: 10px 0px 25px 0px;
-    min-height: 100vh;
-    box-shadow:0px 4px 5px rgba(0, 0, 0, 0.4); 
+    .reset, .botao{
+        padding: 0.9vw 2vw;
+        border-radius: 5px;
+    }
 }
- 
- .link{
-    font-size:16px;
-    font-weight:300;
-    text-align:center;
-    position:relative;
-    height:40px;          /*ESTILIZAÇÃO DOS LINKS DA SIDEBAR*/
-    line-height:40px;
-    margin-top:30px;
-    overflow:hidden;
-    width:90%;
-    margin-left:5%;
-    cursor:pointer;
- }
- 
- .link:after{
-    content: '';
-    position:absolute;
-    width:80%;
-    border-bottom:1px solid rgba(255, 255, 255, 0.5);  /*EFEITO DA LINHA NOS NOMES*/
-    bottom:50%;
-    left:-100%;
-    transition-delay: all 0.5s;
-    transition: all 0.5s;
- }
- 
- .link:hover:after,
- .link.hover:after{                     /*EFEITO CAMBALHOTA*/
-    left:100%;
- }
- 
- .link .texto{
-    text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
-    transition:all 0.75s;                                  /*EFEITO CAMBALHOTA TRANSIÇÃO*/   
-    transform:translateY(100%) translateZ(0);
-    transition-delay:all 0.25s;
- }
- 
- .link:hover .texto,
- .link.hover .texto{
-    text-shadow:0px -40px 0px rgba(255, 255, 255, 0);  /*EFEITO HOVER DA TRANSIÇÃO DA CAMBALHOTA*/
-    transform:translateY(0%) translateZ(0) scale(1.1);
-    font-weight:600;
- }
-/*FIM DA SIDE BAR*/
+
+@media only  screen and (max-width: 1500px){
+    
+    .botoes{               
+        bottom: 0vh;
+    }
+
+    .reset {
+        margin-top: 1rem;
+    }
+
+    .botao{
+        margin-top: 1rem;
+    }
+    
+    .container{ 
+        bottom: 95vh;
+        left: 125px;
+        min-height: 75vh;
+        min-width: 50vw;
+    }
+}
+
+
+@media only  screen and (max-width: 950px){
+    
+    .botoes{               
+        bottom: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .reset {
+        margin-top: 1rem;
+    }
+
+    .botao{
+        margin-top: 1rem;
+    }
+    
+    .container{ 
+        bottom: 95vh;
+        left: 125px;
+        min-height: 75vh;
+        min-width: 50vw;
+    }
+}

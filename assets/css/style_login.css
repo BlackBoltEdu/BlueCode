@@ -162,7 +162,6 @@ form .input-field:first-child{
     bottom: -5px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
-
 }
 
 .input-field .underline::after{
@@ -176,6 +175,10 @@ form .input-field:first-child{
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin:left;
+}
+
+input:valid ~ div:{
+	background: red !important;
 }
 
 .input-field input:focus ~ .underline::after{
