@@ -105,9 +105,9 @@ a{
     left: 7vw;
 }
 
-main h2{
+main h1{
     font-weight: 600;
-    margin-bottom: 2rem;                /*FORMATAÇÃO DO TITULO H2*/
+    margin-bottom: 2rem;                /*FORMATAÇÃO DO TITULO H1*/
     color: #7a7fe4;
 }
 
