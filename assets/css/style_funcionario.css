@@ -242,7 +242,7 @@ select option{
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 1rem;
-    min-width: 900px;
+    min-width: 60vw;
 }
 
 .content-table thead tr {
@@ -265,18 +265,14 @@ select option{
     background-color: #f3f3f3;
 }
 
-
-
 a{
     text-decoration: none;
     color: white;
 }
 
 .edit{
-    padding: 5px 15px;
-    position: relative;
-    left: 35px;
-    margin: 0px 5px;
+    padding: 0.3vh 1vw;
+    margin: 0px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
 }
