@@ -170,7 +170,7 @@ select option{
 
 
 /*COMEÇO DA SIDEBAR*/
- a{
+ .teste{
     text-decoration: none;
     color:#fafafa;              /*ESTILIZAÇÃO DO NOMES DO MENU*/
     letter-spacing: 0.5px;
@@ -235,4 +235,48 @@ select option{
  }
 /*FIM DA SIDE BAR*/
 
+.content-table{
+    position: relative;
+    bottom: 90vh;
+    left: 27vw;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1rem;
+    min-width: 900px;
+}
 
+.content-table thead tr {
+    background-color: rgba(84, 88, 179, 0.7);
+    text-align: left;
+    font-weight: 600;
+    color: #fafafa;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #000000 ;
+}
+
+.content-table tbody tr {
+    background-color: #f3f3f3;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.edit{
+    padding: 5px 15px;
+    position: relative;
+    left: 35px;
+    margin: 0px 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
