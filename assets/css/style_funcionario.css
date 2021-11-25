@@ -240,9 +240,10 @@ select option{
     bottom: 90vh;
     left: 27vw;
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 1rem;
-    min-width: 60vw;
+    width: 60vw;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
 }
 
 .content-table thead tr {
@@ -257,12 +258,9 @@ select option{
     padding: 12px 15px;
 }
 
-.content-table tbody tr {
-    border-bottom: 1px solid #000000 ;
-}
-
-.content-table tbody tr {
-    background-color: #f3f3f3;
+.content-table tbody tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 a{
@@ -270,9 +268,16 @@ a{
     color: white;
 }
 
-.edit{
-    padding: 0.3vh 1vw;
-    margin: 0px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
+a.edit{
+    padding: 0.5vh 0.7vw;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+
+a.delete{
+    padding: 0.5vh 0.8vw;
+    margin: 0px 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
 }

@@ -15,16 +15,5 @@
         public function getPDO(){
             return $this->PDO;
         }
-
-        public function buscarFunc(){
-            $con = new Conexao();
-            $resultado = array();
-            
-            $teste = "SELECT nome, email, cpf, tipoUse FROM usuario ORDER BY nome";
-            $func = $con->getPDO()->query($teste);
-            $resultado = $func->fetchAll(PDO::FETCH_ASSOC);
-
-            return $resultado;
-        } 
     } 
 ?>
