@@ -13,57 +13,7 @@
 </head>
 
 <body>
-    <header>
-        <nav class="container-side">
-            <div class="link" id="pet">
-                <div class="texto">
-                    <a href="index.php" style="letter-spacing: 0.5px; font-size: 18px; align-items: center; ;"><i
-                            class="fa fa-paw" aria-hidden="true" style="padding-right: 10px;"></i><strong>CANTINHO DO
-                            PET</strong></a>
-                </div>
-            </div>
-
-            <div class="link">
-                <div class="texto">
-                    <a href="./cadastro_prod.html">
-                        <span class="ani"><i class="fa fa-sign-in" aria-hidden="true"></i>
-                            Cadastrar Produto
-                        </span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="link">
-                <div class="texto">
-                    <a href="./cadastro_fun.html">
-                        <span class="item-login ani"><i class="fa fa-id-card" aria-hidden="true"></i>
-                            Cadastrar Funcionário
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="link">
-                <div class="texto">
-                    <a href="./listaFunc.php">
-                        <span class="ani"><i class="fa fa-list" aria-hidden="true"></i>
-                            Lista de Funcionários
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="link">
-                <div class="texto">
-                    <a href="./listaProd.php">
-                        <span class="ani"><i class="fa fa-list-alt" aria-hidden="true"></i>
-                            Lista de Produtos
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php require_once "./sidebar.html"?>
 
     <div class="center">
         <main class="container">
