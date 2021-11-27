@@ -1,7 +1,7 @@
 <?php
     require_once "Conexao.php";
     class CrudFuncionarios{
-        public function buscarFunc(){
+        public function buscarTodosFunc(){
             $con = new Conexao();
             $resultado = array();
             
@@ -17,6 +17,18 @@
             $delete = $con->getPDO()->prepare("DELETE FROM usuario WHERE id= :id");
             $delete->bindValue(':id', $id);
             $delete->execute();
+        }
+
+        public function buscarFuncionario($id){
+            $con = new Conexao();
+            $resultado = array();
+
+            $selecionar = $con->getPDO()->prepare("SELECT * FROM usuario WHERE id = :id");
+            $selecionar->bindValue(':id', $id);
+            $selecionar->execute();
+
+            $resultado = $selecionar->fetch(PDO::FETCH_ASSOC);
+            return $resultado;
         }
     }
 ?>

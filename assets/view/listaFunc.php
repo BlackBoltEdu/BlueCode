@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
-    <body class="t2">
+    <body class="b-corpo">
         <?php require_once "./sidebar.html"?>
 
         <table class="content-table">
@@ -21,7 +21,7 @@
                     <th>E-mail</th>
                     <th>CPF</th>
                     <th>Cargo</th>
-                    <th>Ação</th>
+                    <th class="btn-crud">Ação</th>
                 </tr>
             </thead>
 
@@ -31,7 +31,7 @@
                     require_once "../php/CrudFuncionarios.php";
                     $func = new CrudFuncionarios();
                     
-                    $dados = $func->buscarFunc();
+                    $dados = $func->buscarTodosFunc();
 
                     if(count($dados)>0){
                         for($i=0; $i < count($dados); $i++){
@@ -42,9 +42,9 @@
                                 } 
                             }
                 ?>
-                            <td>
-                                <a class="edit" href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                <a class="delete" href="./listaFunc.php?id=<?php echo $dados[$i]['id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <td class="btn-crud">
+                                <a class="btn-edit-delete" href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a class="btn-edit-delete" href="./listaFunc.php?id=<?php echo $dados[$i]['id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </td>
                 <?php
                             echo "</tr>";
@@ -57,7 +57,6 @@
         </table>
     </body>
 </html>
-
 
 <!-- Pegando o ID do funcionario e deletando do banco
     Após isso redirecionando para listaFunc.php -->

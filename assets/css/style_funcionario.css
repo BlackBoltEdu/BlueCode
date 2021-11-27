@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
+/* RESETANDO O CSS E DEFININDO FONTE DO SITE */
 *{
     margin: 0;
     padding: 0;
@@ -15,57 +17,63 @@ body{
     height: 100vh;
 }
 
-/*COMEÇO DO FORMULÁRIO*/
+        /* COMEÇO DO FORMULÁRIO */
+/* CENTRALIZAÇÃO DO FORMULÁRIO EM RELAÇÃO AO BODY */
 .center{
     display: flex;
-    justify-content: center;  /*CENTRALIZAÇÃO DO FORMULÁRIO EM RELAÇÃO AO BODY*/
+    justify-content: center;  
     align-items: center;
 }
 
+/* FORMATAÇÃO DO CONTAINER || POSIÇÕES */
 .container{
     background: #fafafa;
     min-width: 35vw;
     max-height: 92vh;
-
-
     padding: 1.5rem 2rem;
     margin: 7.5vh 0vh 0vh 0vh;
-
     /* Estlizando a box */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);            /*FORMATAÇÃO DO CONTAINER || POSIÇÕES*/
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);            
     border-radius: 10px;
     overflow: hidden;
 }
 
+/* FORMATAÇÃO DO TITULO H2 */
 main h1{
     font-weight: 600;
-    margin-bottom: 2rem;                /*FORMATAÇÃO DO TITULO H2*/
+    margin-bottom: 2rem;
     color: #7a7fe4;
 }
 
+/* FORMATAÇÃO DO FORMULÁRIO PARA DEIXAR OS COMPONENTES UM ABAIXO DO OUTRO */
 form{
     display: flex;
-    flex-direction: column;   /*FORMATAÇÃO DO FORMULÁRIO PARA DEIXAR OS COMPONENTES UM ABAIXO DO OUTRO*/
+    flex-direction: column;
 }
+
+/* ESPAÇAMENTO DOS INPUTS */
 form .input-field{
-    margin-bottom: 1rem;      /*ESPAÇAMENTO DOS INPUTS*/  
+    margin-bottom: 1rem;
 }
+
+/* LINHA DE BAIXO COM O EFEITO DE CORRER */
 .input-field .underline::before{
     content: '';
     position: absolute;
     height: 2px;
-    width: 100%;                           /*LINHA DE BAIXO COM O EFEITO DE CORRER*/
+    width: 100%;
     bottom: 15px;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
 }
 
+/* LINHA DE BAIXO COM O EFEITO DE CORRER */
 .input-field .underline::after{
     content: '';
     position: absolute;
     height: 2px;
     width: 100%;
-    bottom: 15px;                                            /*LINHA DE BAIXO COM O EFEITO DE CORRER*/
+    bottom: 15px;
     left: 0;
     background: linear-gradient(45deg,#a4a8f4, #7a7fe4);
     transform: scaleX(0);
@@ -73,43 +81,48 @@ form .input-field{
     transform-origin: left;
 }
 
+/* TRANSIÇÃO DO EFEITO */
 .input-field input:focus ~ .underline::after{
-    transform: scaleX(1);                                   /*TRANSIÇÃO DO EFEITO*/
+    transform: scaleX(1);
 }
 
+/* RESETANDO FORMATAÇÃO DOS INPUTS PARA MELHOR MANIPULAÇÃO */
 .input-field{
     border: none;
     position: relative;
-    display: flex;                                        /*RESETANDO FORMATAÇÃO DOS INPUTS PARA MELHOR MANIPULAÇÃO*/
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
+/* FORMATAÇÃO E ESTILIZAÇÃO DOS INPUTS */
 .input-field input{
     outline: none;
-    font-size: 0.9rem;                    /*FORMATAÇÃO E ESTILIZAÇÃO DOS INPUTS*/
+    font-size: 0.9rem;
     color: rgba(0, 0, 0, 0.7);
     background: transparent;
     font-weight: 300;
 }
 
+/* ESTILIZAÇÃO DO LABEL */
 .input-field label{
-    color:#7a7fe4;                     /*ESTILIZAÇÃO DO LABEL*/
+    color:#7a7fe4;
     font-weight: 300;
     margin-bottom: 0.7rem;
-
 }
 
+/* ESTILIZAÇÃO DO PLACEHOLDER */
 .input-field input::placeholder{
-    color: rgba(0, 0, 0, 0.5);          /*ESTILIZAÇÃO DO PLACEHOLDER*/
+    color: rgba(0, 0, 0, 0.5);
     font-weight: 300;
 }
 
+/* POSICIONAMENTO DOS BOTÕES */
 .botoes{
     display: flex;
-    justify-content: space-between;   
-    font-weight: 300;                     /*POSICIONAMENTO DOS BOTÕES*/
-    position: relative;                   
+    justify-content: space-between;
+    font-weight: 300;
+    position: relative;
     bottom: 20px;
     padding-top: -50px;
 }
@@ -248,65 +261,68 @@ select option{
     min-height: 100vh;
     box-shadow:0px 4px 5px rgba(0, 0, 0, 0.4); 
 }
- 
- .link{
+
+/* ESTILIZAÇÃO DOS LINKS DA SIDEBAR */
+.link{
     font-size:16px;
     font-weight:300;
     text-align:center;
     position:relative;
-    height:40px;          /*ESTILIZAÇÃO DOS LINKS DA SIDEBAR*/
+    height:40px;
     line-height:40px;
     margin-top:30px;
     overflow:hidden;
     width:90%;
     margin-left:5%;
     cursor:pointer;
- }
- 
- .link:after{
+}
+
+/* EFEITO DA LINHA NOS NOMES */
+.link:after{
     content: '';
     position:absolute;
     width:80%;
-    border-bottom:1px solid rgba(255, 255, 255, 0.5);  /*EFEITO DA LINHA NOS NOMES*/
+    border-bottom:1px solid rgba(255, 255, 255, 0.5);
     bottom:50%;
     left:-100%;
     transition-delay: all 0.5s;
     transition: all 0.5s;
- }
- 
- .link:hover:after,
- .link.hover:after{                     /*EFEITO CAMBALHOTA*/
-    left:100%;
- }
- 
- .link .texto{
+}
+
+/* EFEITO CAMBALHOTA */
+.link:hover:after,
+.link.hover:after{
+   left:100%;
+}
+
+.link .texto{
     text-shadow:0px -40px 0px rgba(255, 255, 255, 1);
-    transition:all 0.75s;                                  /*EFEITO CAMBALHOTA TRANSIÇÃO*/   
+    transition:all 0.75s;                                    
     transform:translateY(100%) translateZ(0);
     transition-delay:all 0.25s;
- }
- 
- .link:hover .texto,
- .link.hover .texto{
-    text-shadow:0px -40px 0px rgba(255, 255, 255, 0);  /*EFEITO HOVER DA TRANSIÇÃO DA CAMBALHOTA*/
+}
+
+/* EFEITO HOVER DA TRANSIÇÃO DA CAMBALHOTA */
+.link:hover .texto,
+.link.hover .texto{
+    text-shadow:0px -40px 0px rgba(255, 255, 255, 0);  
     transform:translateY(0%) translateZ(0) scale(1.1);
     font-weight:600;
- }
-/*FIM DA SIDE BAR*/
+}
 
+/* Estilizando Tabela de Funcionarios */
 .content-table{
-    border-collapse: collapse;
-
     width: 60vw;
     margin: 20vh 0px 0px 18vw;
-  
-
-    font-size: 1rem;
+    border-collapse: collapse;
     border-radius: 15px 15px 0 0;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
     overflow: hidden;
 }
 
-.t2{
+/* Escodendo o body do lista Funcionarios */
+.b-corpo{
     overflow: hidden;
 }
 
@@ -316,6 +332,13 @@ select option{
     font-weight: 600;
     color: #fafafa;
 }
+
+/* DIFININDO TAMANHO DOS CAMPOS DA TABELA */
+.content-table tbody tr td:nth-child(1){width: 20%;}
+.content-table tbody tr td:nth-child(2){width: 20%;}
+.content-table tbody tr td:nth-child(3){width: 8%;}
+.content-table tbody tr td:nth-child(4){width: 8%;}
+.content-table tbody tr td:nth-child(5){width: 8%;}
 
 .content-table th,
 .content-table td{
@@ -327,21 +350,19 @@ select option{
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.content-table .btn-crud{
+    text-align: center;
+}
+
+/* Botões de Editar e Deletar Funcionarios */
 a{
     text-decoration: none;
     color: white;
 }
 
-a.edit{
+a.btn-edit-delete{
     padding: 0.5vh 0.7vw;
     margin: 0px;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 5px;
-}
-
-a.delete{
-    padding: 0.5vh 0.8vw;
-    margin: 0px 5px;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
 }
@@ -358,7 +379,8 @@ a.delete{
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    box-shadow:0px 4px 5px rgba(0, 0, 0, 0.4); 
+    box-shadow:0px 4px 5px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
 }
 
 #toggle::before{
@@ -423,5 +445,4 @@ a.delete{
     color: #fff;
     font-size: 1.2em;
     letter-spacing: 2px;
-    
 }
