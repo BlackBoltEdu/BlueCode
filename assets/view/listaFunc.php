@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
-    <body>
+    <body class="t2">
         <?php require_once "./sidebar.html"?>
 
         <table class="content-table">
@@ -58,10 +58,10 @@
     </body>
 </html>
 
-/*
- *Pegando o ID do funcionario e deletando do banco
- *Após isso redirecionando para listaFunc.php
- */
+
+<!-- Pegando o ID do funcionario e deletando do banco
+    Após isso redirecionando para listaFunc.php -->
+ 
 <?php
     if(isset($_GET['id'])){
         $id_funcionario = addslashes($_GET['id']);

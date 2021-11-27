@@ -18,7 +18,7 @@
 
     <div class="center">
         <main class="container">
-            <h2>Cadastro - Funcionário</h2>
+            <h1>Cadastro - Funcionário</h1>
             <form action="../php/castrato_fun.php" method="post">
                 <!--Nome-->
                 <div class="input-field">
@@ -80,7 +80,5 @@
         </main>
     </div>
     <script src="https://kit.fontawesome.com/d7ba26eefd.js" crossorigin="anonymous"></script>
-    <script src="../javascript/sidebar.js"></script>
-    <script src="../javascript/validacao_cpf.js"></script>
 </body>
 </html>
