@@ -20,38 +20,35 @@
         <main class="container">
             <h1>Cadastro - Funcionário</h1>
             <form action="../php/castrato_fun.php" method="post">
-                <!--Nome-->
+                        <!--Nome-->
                 <div class="input-field">
                     <label for="">Nome</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autocomplete="off">
                     <div class="underline"></div></br>
                 </div>
 
-                <!--E-mail-->
+                        <!--E-mail-->
                 <div class="input-field">
                     <label for="">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                     <div class="underline"></div></br>
                 </div>
 
-                <!--Senha-->
-
+                        <!--Senha-->
                 <div class="input-field">
                     <label for="">Senha</label>
                     <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                     <div class="underline"></div></br>
                 </div>
 
-                <!--Conf. Senha-->
-
+                        <!--Conf. Senha-->
                 <div class="input-field">
                     <label for="">Confirmar Senha</label>
                     <input type="password" id="confsenha" name="confsenha" placeholder="Confirme sua senha" required>
                     <div class="underline"></div></br>
                 </div>
 
-                <!--CPF-->
-
+                        <!--CPF-->
                 <div class="input-field">
                     <label for="">CPF</label>
                     <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required maxlength="14"
@@ -59,8 +56,7 @@
                     <div class="underline"></div></br>
                 </div>
 
-                <!--Cargo-->
-
+                        <!--Cargo-->
                 <div class="input-field">
                     <label for="">Cargo</label>
                     <select name="cargo" id="cargo">

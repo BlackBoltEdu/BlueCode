@@ -43,7 +43,7 @@
                             }
                 ?>
                             <td class="btn-crud">
-                                <a class="btn-edit-delete" href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a class="btn-edit-delete" id="editar" href="./listaFunc.php?id_up=<?php echo $dados[$i]['id'];?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                 <a class="btn-edit-delete" href="./listaFunc.php?id=<?php echo $dados[$i]['id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </td>
                 <?php
@@ -55,16 +55,50 @@
                 ?>   
             </tbody>
         </table>
+        
+        <?php
+            if(isset($_GET['id_up'])){
+                $id_update = addslashes($_GET['id_up']);
+                $update = $func->buscarFuncionario($id_update);
+           }
+        ?>
+        <div class="modal-container" id="modal-atualizar">
+            <div class="modal">
+                <form action="">
+                    <h1>Atualização de Dados <?php if(isset($update)){ echo "- ". $update['nome'];}?></h1>
+                    <div class="dflex">
+                        <!-- NOME -->
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
+                        <!-- E-MAIL -->
+                        <label for="nome">E-mail</label>
+                        <input type="text" id="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
+                        <!-- CPF -->
+                        <label for="nome">CPF</label>
+                        <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>">
+                        <!-- CARGO -->
+                        <label for="nome">Cargo</label>
+                        <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
+                        
+                        <!-- BOTÕES -->
+                    </div>
+                        <input type="button" class="btn-atualizar" value="Atualizar">
+                        <input type="button" class="btn-fechar" value="Cancelar">
+                        <input type="button" class="x-fechar" value="X">
+                    </form>
+            </div>
+        </div>
     </body>
+    <script src="../javascript/script.js"></script>
 </html>
 
 <!-- Pegando o ID do funcionario e deletando do banco
     Após isso redirecionando para listaFunc.php -->
- 
 <?php
     if(isset($_GET['id'])){
-        $id_funcionario = addslashes($_GET['id']);
-        $func->deletarFunc($id_funcionario);
-        header('Location: ../view/listaFunc.php');
+        $id_delete = addslashes($_GET['id']);
+        $func->deletarFunc($id_delete);
+        header('location: ./listaFunc.php');
+        exit;
     }
 ?>
