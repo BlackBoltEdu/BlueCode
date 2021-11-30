@@ -1,6 +1,8 @@
+
+
 function iniciaModal(modalID){
     const modal = document.getElementById(modalID);
-    modal.classList.add('mostrar');
+    modal.classList.toggle('mostrar');
     modal.addEventListener('click', (e) =>{
         if(e.target.id == modalID || e.target.className == 'x-fechar' || e.target.className == 'btn-cancelar'){
             modal.classList.remove('mostrar');
@@ -8,5 +10,6 @@ function iniciaModal(modalID){
     });
 }
 
-const logo = document.querySelector('#editar');
-logo.addEventListener('click', () => iniciaModal('modal-atualizar'));
+const teste = document.querySelector('#editar');
+
+teste.addEventListener('click', () => iniciaModal('modal-atualizar'));

@@ -43,7 +43,7 @@
                             }
                 ?>
                             <td class="btn-crud">
-                                <a class="btn-edit-delete" id="editar" href="./listaFunc.php?id_up=<?php echo $dados[$i]['id'];?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a class="btn-edit-delete" id="editar" href="<?= $_SERVER['PHP_SELF'] ?>?id_up=<?php echo $dados[$i]['id'];?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                 <a class="btn-edit-delete" href="./listaFunc.php?id=<?php echo $dados[$i]['id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </td>
                 <?php
@@ -62,32 +62,42 @@
                 $update = $func->buscarFuncionario($id_update);
            }
         ?>
+        
+        <?php 
+            if(isset($_GET['id_up']) && !empty($_GET['id_up'])){
+        ?>
         <div class="modal-container" id="modal-atualizar">
-            <div class="modal">
-                <form action="">
-                    <h1>Atualização de Dados <?php if(isset($update)){ echo "- ". $update['nome'];}?></h1>
-                    <div class="dflex">
-                        <!-- NOME -->
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
-                        <!-- E-MAIL -->
-                        <label for="nome">E-mail</label>
-                        <input type="text" id="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
-                        <!-- CPF -->
-                        <label for="nome">CPF</label>
-                        <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>">
-                        <!-- CARGO -->
-                        <label for="nome">Cargo</label>
-                        <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
-                        
-                        <!-- BOTÕES -->
-                    </div>
-                        <input type="button" class="btn-atualizar" value="Atualizar">
-                        <input type="button" class="btn-fechar" value="Cancelar">
-                        <input type="button" class="x-fechar" value="X">
-                    </form>
+        <div class="modal">
+            <form action="">
+                <div class="dflex">
+                <h1>Atualização de Dados <?php if(isset($update)){ echo "- ". $update['nome'];}?></h1>
+                <!-- NOME -->
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
+
+                <!-- E-MAIL -->
+                <input type="text" id="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
+                <label for="nome">E-mail</label>
+
+                <!-- CPF -->
+                <label for="nome">CPF</label>
+                <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>">
+
+                <!-- CARGO -->
+                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
+                <label for="nome">Cargo</label>
+
+                <!-- BOTÕES -->  
+                </div>
+                    <input type="button" class="btn-atualizar" value="Atualizar">
+                    <a class="btn-fechar" href="<?= $_SERVER['PHP_SELF'] ?>">Cancelar</a>
+                    <!-- <input type="button" class="btn-fechar" value="Cancelar"> -->
+                    <!-- <input type="button"  value="X"> -->
+                    <a class="x-fechar" href="<?= $_SERVER['PHP_SELF'] ?>">X</a>
+                </form>
             </div>
         </div>
+        <?php }?>
     </body>
     <script src="../javascript/script.js"></script>
 </html>
