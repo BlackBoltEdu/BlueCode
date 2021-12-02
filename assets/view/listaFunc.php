@@ -55,7 +55,6 @@
                 ?>   
             </tbody>
         </table>
-        
         <?php
             if(isset($_GET['id_up'])){
                 $id_update = addslashes($_GET['id_up']);
@@ -66,37 +65,41 @@
         <?php 
             if(isset($_GET['id_up']) && !empty($_GET['id_up'])){
         ?>
-        <div class="modal-container" id="modal-atualizar">
-        <div class="modal">
-            <form action="">
-                <div class="dflex">
-                <h1>Atualização de Dados <?php if(isset($update)){ echo "- ". $update['nome'];}?></h1>
-                <!-- NOME -->
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
+            <div class="modal-container" id="modal-atualizar">
+                <div class="modal">
+                    <form action="">
+                        <div class="dflex">
+                            <h1>Atualização de Dados <?php if(isset($update)){ echo "- ". $update['nome'];}?></h1>
+                            
+                            <div class="label-modal">
+                                <label class="t3" for="nome">Nome</label>
+                                <label  for="nome">E-mail</label>
+                            </div>
 
-                <!-- E-MAIL -->
-                <input type="text" id="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
-                <label for="nome">E-mail</label>
+                            <div class="input-modal">
+                                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
+                                <input type="text" id="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
+                            </div>
+                            
+                            <div class="label-modal">
+                                <label for="nome">CPF</label>
+                                <label for="nome">Cargo</label>
+                            </div>
 
-                <!-- CPF -->
-                <label for="nome">CPF</label>
-                <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>">
+                            <div class="input-modal">
+                                <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>">
+                                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
+                            </div>
 
-                <!-- CARGO -->
-                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
-                <label for="nome">Cargo</label>
-
-                <!-- BOTÕES -->  
+                        </div>
+                        
+                        <!-- BOTÕES -->  
+                        <input type="button" class="btn-atualizar" value="Atualizar">
+                        <a class="btn-fechar" href="<?= $_SERVER['PHP_SELF'] ?>">Cancelar</a>
+                        <a class="x-fechar" href="<?= $_SERVER['PHP_SELF'] ?>">x</a>
+                    </form>
                 </div>
-                    <input type="button" class="btn-atualizar" value="Atualizar">
-                    <a class="btn-fechar" href="<?= $_SERVER['PHP_SELF'] ?>">Cancelar</a>
-                    <!-- <input type="button" class="btn-fechar" value="Cancelar"> -->
-                    <!-- <input type="button"  value="X"> -->
-                    <a class="x-fechar" href="<?= $_SERVER['PHP_SELF'] ?>">X</a>
-                </form>
             </div>
-        </div>
         <?php }?>
     </body>
     <script src="../javascript/script.js"></script>

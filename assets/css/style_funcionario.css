@@ -461,36 +461,23 @@ a.btn-edit-delete{
     align-items: center;
 }
 
-.modal-container.mostrar{
-    
-}
-
 .modal h1{
     font-weight: 600;
     font-size: 1.5em;
     margin-bottom: 1rem;
     color: #7a7fe4;
+    text-align: center;
 }
 
 .modal{
     width: 40vw;
     min-width: 500px;
-    height: 47vh;
+    height: 40vh;
     min-height: 400px;
     background-color: white;
     padding: 30px;
     position: relative;
     border-radius: 5px;
-}
-
-@keyframes modal {
-    from{
-        opacity: 0;
-        transform: translate(0, -60px, 0);
-    }to{
-        opacity: 1;
-        transform: translate(0, 0, 0);
-    }
 }
 
 .mostrar .modal{
@@ -500,6 +487,27 @@ a.btn-edit-delete{
 .dflex{
     display: flex;
     flex-direction: column;
+}
+
+.t3{
+    display: flex;
+    flex-direction: row;
+}
+
+.label-modal{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+}
+
+.input-modal{
+    display: flex;
+    justify-content: space-between;
+    width: 87.2%;
+}
+
+.dflex input{
+    width: 45%;
 }
 
 .x-fechar{
@@ -515,23 +523,22 @@ a.btn-edit-delete{
     font-size: 1.3em;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    padding-top: 5px;
 
     /* ESTILIZANDO BOTÃO */
     background-color: #7a7fe4;
     border: 4px solid white;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
 }
 
 .btn-fechar{
-    margin-top: 2rem;
+    position: relative;
     padding: 0.9vw 2vw;
     background: linear-gradient(to left, #a4a8f4,#7a7fe4);
     cursor: pointer;
     color: #fafafa;
     font-size: 1rem;
     font-weight: 300;
-    transition: all 0.4s;
     text-align: center;
 }
