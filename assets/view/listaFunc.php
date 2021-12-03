@@ -61,13 +61,32 @@
                 $update = $func->buscarFuncionario($id_update);
            }
         ?>
+
+        <?php
+
+            if(!empty($nome)){
+                if(isset($_GET['id_up']) && !empty($_GET['id_up'])){
+                    $id = addslashes($_GET['id_up']);
+                    $nome = addslashes($_POST['nome']);
+                    $email = addslashes($_POST['email']);
+                    $cpf = addslashes($_POST['cpf']);
+                    $tipoUse = addslashes($_POST['cargo']);
+
+                    if(!empty($id) && !empty($nome) && !empty($email) && !empty($cpf) && !empty($tipoUse)){
+                        //VERIFICAR SE O E-MAIL JÁ ESTÁ CADASTRADO
+                        $func->atualizarFuncionario($id, $nome, $email, $cpf, $tipoUse);
+                        $_SERVER['PHP_SELF'];
+                    }
+                }
+            }
+        ?>
         
         <?php 
             if(isset($_GET['id_up']) && !empty($_GET['id_up'])){
         ?>
             <div class="modal-container" id="modal-atualizar">
                 <div class="modal">
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="dflex">
                             <h1>Atualização de Dados <?php if(isset($update)){ echo "- ". $update['nome'];}?></h1>
                             
@@ -80,15 +99,15 @@
                                 <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
                                 <input type="text" id="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
                             </div>
-                            
-                            <div class="label-modal">
+                                                    
+                            <div class="label-modal second">
                                 <label for="nome">CPF</label>
                                 <label for="nome">Cargo</label>
                             </div>
 
-                            <div class="input-modal">
-                                <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>">
-                                <input type="text" id="nome" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
+                            <div class="input-modal second">
+                                <input type="text" id="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>" onkeyup="mascara_cpf()" maxlength="14">
+                                <input type="text" id="cargo" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
                             </div>
 
                         </div>
@@ -100,9 +119,10 @@
                     </form>
                 </div>
             </div>
+            <script src="../javascript/validacao_cpf.js"></script>
         <?php }?>
-    </body>
-    <script src="../javascript/script.js"></script>
+        <script src="../javascript/script.js"></script>
+    </body>   
 </html>
 
 <!-- Pegando o ID do funcionario e deletando do banco

@@ -17,6 +17,10 @@ body{
     height: 100vh;
 }
 
+body::-webkit-scrollbar{
+    background-color: #322341;
+}
+
         /* COMEÇO DO FORMULÁRIO */
 /* CENTRALIZAÇÃO DO FORMULÁRIO EM RELAÇÃO AO BODY */
 .center{
@@ -447,6 +451,8 @@ a.btn-edit-delete{
     letter-spacing: 2px;
 }
 
+/* MODAL */
+
 .modal-container{
     width: 100vw;
     height: 100vh;
@@ -472,7 +478,7 @@ a.btn-edit-delete{
 .modal{
     width: 40vw;
     min-width: 500px;
-    height: 40vh;
+    height: 45vh;
     min-height: 400px;
     background-color: white;
     padding: 30px;
@@ -507,8 +513,36 @@ a.btn-edit-delete{
 }
 
 .dflex input{
-    width: 45%;
+    width: 50%;
+    outline: none;
 }
+
+.dflex input:nth-child(2),
+.dflex input:nth-child(4){
+    position: relative;
+    left: 65px;
+}
+
+.label-modal label:nth-child(2),
+.label-modal label:nth-child(4){
+    position: relative;
+    left: 35px;
+}
+
+.input-modal ~ .second{
+    position: relative;
+    top: 20px;
+}
+
+.label-modal label{
+    color: #7a7fe4;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.input-modal input{
+    font-size: 1rem;
+}
+
 
 .x-fechar{
     /* Posicionamento */
@@ -534,11 +568,39 @@ a.btn-edit-delete{
 
 .btn-fechar{
     position: relative;
-    padding: 0.9vw 2vw;
-    background: linear-gradient(to left, #a4a8f4,#7a7fe4);
+    top: 90px;
+    padding: 0.9vw 1.5vw;
+    background: #fafafa;
+    border: 1px solid #a4a8f4;
     cursor: pointer;
-    color: #fafafa;
+    color: #a4a8f4;
     font-size: 1rem;
     font-weight: 300;
     text-align: center;
+    border: 1px solid #a4a8f4;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.btn-fechar:hover{
+    box-shadow: 3px 3px 3px #7a7fe4;
+}
+
+.btn-atualizar{
+    position: relative;
+    padding: 0.9vw 1.5vw;
+    background: #7a7fe4;
+    border: 1px solid #a4a8f4;
+    cursor: pointer;
+    color: #fafafa;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.5s;
+    top: 80px;
+}
+
+.btn-atualizar:hover{
+    background: #5b63fa;
 }
