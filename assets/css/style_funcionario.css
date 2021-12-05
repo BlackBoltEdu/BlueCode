@@ -460,7 +460,7 @@ a.btn-edit-delete{
     background-color: rgba(0,0,0,0.5);
     top: 0px;
     left: 0px;
-    z-index: 100;
+    z-index: 30;
     /* display: none; */
     display: flex;
     justify-content: center;
@@ -604,3 +604,65 @@ a.btn-edit-delete{
 .btn-atualizar:hover{
     background: #5b63fa;
 }
+
+p.msg-atualizado{
+    /* TAMANHO E POSIÇÃO DA MENSAGEM */
+    height: 100px;
+    width: 500px;
+    right: 5px;
+    top: 20px;
+    /* position: relative; */
+    
+
+    /* AJUSTANDO A POSIÇÃO DO TEXTO */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+
+    /* ESTILIZANDO TEXTO */
+    font-weight: bold;
+    text-shadow: 2px 1px 5px rgb(29, 100, 35);
+    color: rgb(29, 100, 35);
+
+    /* ESTILIZANDO FUNDO DO TEXTO */
+    background-color: rgba(136, 224, 143, .8);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    transform: translateX(20px);
+    animation-name: animar;
+    animation-duration: 1s;
+}
+
+@keyframes animar {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* .load{
+    position: relative;
+    z-index: 110;
+    top: -200px;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 10px solid #5b63fa;
+    border-top-color: #a4a8f4;
+    position: relative;
+    animation: load 3s linear infinite forwards;
+}
+
+@keyframes load {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        display: none;
+    }
+} */

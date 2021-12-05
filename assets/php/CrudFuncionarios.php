@@ -42,13 +42,13 @@
                 return false;
             }else{
                 $atualizar = $con->getPDO()->prepare("UPDATE usuario SET nome = :nome, email = :email, cpf = :cpf, tipoUse = :cargo WHERE id = :id");
-                $atualizar->bindValue(':id', $id);
                 $atualizar->bindValue(':nome', $nome);
                 $atualizar->bindValue(':email', $email);
                 $atualizar->bindValue(':cpf', $cpf);
                 $atualizar->bindValue(':cargo', $tipoUse);
-                
+                $atualizar->bindValue(':id', $id);
                 $atualizar->execute();
+                return true;
             }
         }
     }
