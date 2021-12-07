@@ -60,10 +60,10 @@
                 <div class="input-field">
                     <label for="">Cargo</label>
                     <select name="cargo" id="cargo">
-                        <option selected disabled value="1">Selecione sua função:</option>
-                        <option value="2">Vendedor(a)</option>
-                        <option value="3">Atendente(a)</option>
-                        <option value="4">Veterinário(a)</option>
+                        <option selected disabled value="Vendedor(a)">Selecione sua função:</option>
+                        <option value="Vendedor(a)">Vendedor(a)</option>
+                        <option value="Atendente(a)">Atendente(a)</option>
+                        <option value="Veterinário(a)">Veterinário(a)</option>
                     </select></br>
                 </div>
 

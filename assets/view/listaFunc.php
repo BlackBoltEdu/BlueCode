@@ -37,7 +37,7 @@
                         for($i=0; $i < count($dados); $i++){
                             echo "<tr>";
                             foreach($dados[$i] as $key => $value){
-                                if($key != "id"){
+                                if($key != "id" && $key != "senha"){
                                     echo "<td>". $value ."</td>";
                                 } 
                             }
@@ -47,10 +47,10 @@
                                 <a class="btn-edit-delete" href="./listaFunc.php?id=<?php echo $dados[$i]['id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                             </td>
                 <?php
-                            echo "</tr>";
                         }
                     }else{
-                        echo "Nenhum registro no banco de dados";
+                        echo "<td colspan='5'>Nenhum funcionário registrado.</td>";
+                        echo "</tr>";
                     }
                 ?>   
             </tbody>
@@ -70,15 +70,16 @@
                     $nome = addslashes($dados['nome']);
                     $email = addslashes($dados['email']);
                     $cpf = addslashes($dados['cpf']);
-                    $tipoUse = addslashes($dados['cargo']);
+                    $cargo = addslashes($dados['cargo']);
 
                    
 
-                    if(!empty($id) && !empty($nome) && !empty($email) && !empty($cpf) && !empty($tipoUse)){
+                    if(!empty($id) && !empty($nome) && !empty($email) && !empty($cpf) && !empty($cargo)){
                         //VERIFICAR SE O E-MAIL JÁ ESTÁ CADASTRADO
-                        if($func->atualizarFuncionario($id, $nome, $email, $cpf, $tipoUse)){
+                        if($func->atualizarFuncionario($id, $nome, $email, $cpf, $cargo)){
                             echo "<p id='msg-att' class='msg-atualizado'> Alteração de cadastro feita com sucesso! </p>";
-                            // header('Location:' . $_SERVER['PHP_SELF']);
+                            header('Location:' . $_SERVER['PHP_SELF']);
+                            exit;
                         }
                     }else{
 
@@ -113,7 +114,7 @@
 
                             <div class="input-modal second">
                                 <input type="text" id="cpf" name="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>" onkeyup="mascara_cpf()" maxlength="14">
-                                <input type="text" id="cargo" name="cargo" value="<?php if(isset($update)){ echo $update['tipoUse']; }?>">
+                                <input type="text" id="cargo" name="cargo" value="<?php if(isset($update)){ echo $update['cargo']; }?>">
                             </div>
 
                         </div>
@@ -138,7 +139,7 @@
     if(isset($_GET['id'])){
         $id_delete = addslashes($_GET['id']);
         $func->deletarFunc($id_delete);
-        header('location: ./listaFunc.php');
+        header('location:'. $_SERVER['PHP_SELF']);
         exit;
     }
 ?>

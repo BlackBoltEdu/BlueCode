@@ -5,7 +5,7 @@
             $con = new Conexao();
             $resultado = array();
             
-            $func = $con->getPDO()->query("SELECT id, nome, email, cpf, tipoUse FROM usuario ORDER BY nome");
+            $func = $con->getPDO()->query("SELECT * FROM funcionarios ORDER BY nome");
             $resultado = $func->fetchAll(PDO::FETCH_ASSOC);
 
             return $resultado;
@@ -14,7 +14,7 @@
         public function deletarFunc($id){
             $con = new Conexao();
             
-            $delete = $con->getPDO()->prepare("DELETE FROM usuario WHERE id= :id");
+            $delete = $con->getPDO()->prepare("DELETE FROM funcionarios WHERE id= :id");
             $delete->bindValue(':id', $id);
             $delete->execute();
         }
@@ -23,7 +23,7 @@
             $con = new Conexao();
             $resultado = array();
 
-            $selecionar = $con->getPDO()->prepare("SELECT * FROM usuario WHERE id = :id");
+            $selecionar = $con->getPDO()->prepare("SELECT * FROM funcionarios WHERE id = :id");
             $selecionar->bindValue(':id', $id);
             $selecionar->execute();
 
@@ -31,7 +31,7 @@
             return $resultado;
         }
 
-        public function atualizarFuncionario($id, $nome, $email, $cpf, $tipoUse){
+        public function atualizarFuncionario($id, $nome, $email, $cpf, $cargo){
             $con = new Conexao();
 
             $buscarEmail = $con -> getPDO() -> prepare("SELECT id FROM usuario WHERE email = :email");
@@ -41,11 +41,11 @@
             if($buscarEmail->rowCount() > 0){
                 return false;
             }else{
-                $atualizar = $con->getPDO()->prepare("UPDATE usuario SET nome = :nome, email = :email, cpf = :cpf, tipoUse = :cargo WHERE id = :id");
+                $atualizar = $con->getPDO()->prepare("UPDATE usuario SET nome = :nome, email = :email, cpf = :cpf, cargo = :cargo WHERE id = :id");
                 $atualizar->bindValue(':nome', $nome);
                 $atualizar->bindValue(':email', $email);
                 $atualizar->bindValue(':cpf', $cpf);
-                $atualizar->bindValue(':cargo', $tipoUse);
+                $atualizar->bindValue(':cargo', $cargo);
                 $atualizar->bindValue(':id', $id);
                 $atualizar->execute();
                 return true;

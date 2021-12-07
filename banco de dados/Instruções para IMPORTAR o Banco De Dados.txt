@@ -1,0 +1,13 @@
+1 - Inicie o XAMPP ou WAMP;
+
+2 - Abra o localhost/phpmyadmin;
+
+3 - Clique em Novo na lateral esquerda;
+
+4 - Clique em importar;
+
+5 - Clique em Escolher arquivo;
+
+6 - Escolha o arquivo cantinhodopet.sql;
+
+7 - Clique em Executar;

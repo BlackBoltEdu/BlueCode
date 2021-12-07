@@ -611,8 +611,6 @@ p.msg-atualizado{
     width: 500px;
     right: 5px;
     top: 20px;
-    /* position: relative; */
-    
 
     /* AJUSTANDO A POSIÇÃO DO TEXTO */
     display: flex;

@@ -7,13 +7,10 @@
     $user ->setEmail($_POST['email']);
     $user ->setSenha(MD5($_POST['senha']));
 
-    $sql ="SELECT id FROM usuario WHERE email = :email AND senha = :senha";
-
-    $inserir = $con -> getPDO() -> prepare($sql);
+    $inserir = $con -> getPDO() -> prepare("SELECT id FROM usuario WHERE email = :email AND senha = :senha");
     $inserir->bindValue(':email', $user->getEmail());
     $inserir->bindValue(':senha', $user->getSenha());
     $inserir->execute();
-    //var_dump($inserir->fetchAll());
 
     if($inserir->rowCount() == 1){
         $dados = $inserir->fetch();
@@ -23,7 +20,7 @@
         header('Location: ../view/index.php');
         exit;
     }else{
-        echo "DEU RUIM!!!";
-        return false;
+        header('Location: ../view/login.html');
+        exit;
     }
 ?>
