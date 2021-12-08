@@ -18,7 +18,7 @@
     <div class="center">
         <main class="container">
             <h1>Cadastro - Produto</h1>
-            <form action="../php/castrato_prod.php" method="post">
+            <form action="../php/cadastro_prod.php" method="post" enctype="multipart/form-data">
                 <!--Nome-->
                 <div class="input-field">
                     <label for="">Nome</label>
@@ -48,18 +48,16 @@
                     <div class="underline"></div></br>
                 </div>
 
-                <!--DATA ENTREGA-->
-                <div class="input-field">
-                    <label for="">Data da Entrega</label>
-                    <input type="date" id="data" name="data">
-                    <div class="underline"></div></br>
-                </div>
+                <!--IMAGEM DO PRODUTO-->
+                <label for="">Data da Entrega</label>
+                <input type="file" id="data" name="arquivo" required>
+                <div class="underline"></div></br>
 
                 <!--BOTÕES-->
                 <div class="botoes">
                     <button class="reset" type="reset">Redefinir</button>
 
-                    <button class="botao" type="submit">Cadastrar</button>
+                    <button class="botao" type="submit" name="btn-cadastrar" value="cadastrar">Cadastrar</button>
                 </div>
             </form>
         </main>

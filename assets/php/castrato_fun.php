@@ -10,11 +10,6 @@
     $user -> setSenha(addslashes(MD5(($_POST['senha']))));
     $cargo = isset($_POST['cargo']) ? $cargo = $_POST['cargo'] : 0;
 
-    echo "<pre>";
-	    print_r($cargo);
-    echo "</pre>";
-    exit;
-
     //verificar se o e-mail já está cadastrado no banco
     $inserir = $con -> getPDO() -> prepare("SELECT id FROM funcionarios WHERE email = :email");
     $inserir -> bindValue (':email' , $user->getEmail());
