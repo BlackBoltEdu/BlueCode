@@ -9,7 +9,7 @@
         
         // ARRAY DOS FORMATOS PERMITIDOS.
         $formatosArquivo = array("png", "jpg", "jpeg", "svg");
-        $extensao = pathinfo($_FILES['arquvios']['name'], PATHINFO_EXTENSION);
+        $extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
         
         if(in_array($extensao, $formatosArquivo)){
             $pasta = '../arquivos/';
@@ -22,12 +22,23 @@
             $codigoProd = addslashes($_POST['codigoProd']);
             $valorProd = addslashes($_POST['valorProd']);
             $qntProd = addslashes($_POST['qntProd']);
-            
-            $inserirImg = $con->getPDO()->prepare("INSERT INTO produtos (nomeProd, codigoProd, valorProd, quantidadeProd, nomeArquivo) VALUE (:np, :cp, :vp, :qp, :na)");
+
+            $inserirImg = $con->getPDO()->prepare("INSERT INTO produtos (nomeProd, codigoProd, valorProd, qtdProd, nomeArquivo) VALUE (:np, :cp, :vp, :qp, :na)");
             $inserirImg->bindValue(':np', $nomeProd);
             $inserirImg->bindValue(':cp', $codigoProd);
             $inserirImg->bindValue(':vp', $valorProd);
             $inserirImg->bindValue(':qp', $qntProd);
-            $inserirImg->bindValue(':na', );
+            $inserirImg->bindValue(':na', $novoNome);
+            $inserirImg->execute();
+
+            if($inserirImg->rowCount() > 0 ){
+                header("location: ../view/cadastro_prod.php?c=true");
+                exit;
+            }else{
+                header("location: ../view/cadastro_prod.php?c=false");
+                exit;
+            }
+
+            return $dado;
         }
     }

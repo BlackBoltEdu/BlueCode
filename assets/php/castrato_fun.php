@@ -25,7 +25,6 @@
         $inserir -> bindValue (':senha', $user->getSenha());
         $inserir -> bindValue (':cargo', $cargo);
         $inserir -> execute();
-        echo 'location: ../view/cadastro_fun.php';
         return true;
     }
 ?>

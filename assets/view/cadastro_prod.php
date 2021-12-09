@@ -15,6 +15,12 @@
 <body>
     <?php require_once "./sidebar.html"?>
 
+    <?php
+        if(isset($_GET['c']) && !empty($_GET['c']) && $_GET['c'] == true){
+                echo "<p class='msg-atualizado'>Testedsgsdgsdgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg </p>";
+        }
+        $teste = true;
+    ?>
     <div class="center">
         <main class="container">
             <h1>Cadastro - Produto</h1>
@@ -22,7 +28,7 @@
                 <!--Nome-->
                 <div class="input-field">
                     <label for="">Nome</label>
-                    <input type="text" id="nomeP" name="nomeP" placeholder="Digite o nome do produto" required
+                    <input type="text" id="nomeP" name="nomeProd" placeholder="Digite o nome do produto" required
                         autocomplete="off">
                     <div class="underline"></div></br>
                 </div>
@@ -30,21 +36,21 @@
                 <!--E-mail-->
                 <div class="input-field">
                     <label for="">Código do Produto</label>
-                    <input type="text" id="cProd" name="cProd" placeholder="Digite o código de barras" required>
+                    <input type="text" id="cProd" name="codigoProd" placeholder="Digite o código de barras" required>
                     <div class="underline"></div></br>
                 </div>
 
                 <!--Senha-->
                 <div class="input-field">
                     <label for="">Valor</label>
-                    <input type="text" id="valorP" name="valorP" placeholder="Digite o valor do produto" required>
+                    <input type="text" id="valorP" name="valorProd" placeholder="Digite o valor do produto" required>
                     <!--COLOCAR EM REAL-->
                     <div class="underline"></div></br>
                 </div>
 
                 <div class="input-field">
                     <label for="">Quantidade</label>
-                    <input type="number" id="qntD" name="qntD" placeholder="Digite a quantidade" required>
+                    <input type="number" id="qntD" name="qntProd" placeholder="Digite a quantidade" required>
                     <div class="underline"></div></br>
                 </div>
 
@@ -66,3 +72,10 @@
 </body>
 
 </html>
+
+<?php
+    // if(isset($teste) && $teste == true){
+    //     sleep(5);
+    //     echo "<script> location.href='./cadastro_prod.php'; </script>";
+    // }
+?>

@@ -632,7 +632,7 @@ p.msg-atualizado{
     opacity: 0;
     transform: translateX(20px);
     animation-name: animar;
-    animation-duration: 1s;
+    animation-duration: 3s;
 }
 
 @keyframes animar {

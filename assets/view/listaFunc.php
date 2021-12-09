@@ -70,16 +70,12 @@
                     $nome = addslashes($dados['nome']);
                     $email = addslashes($dados['email']);
                     $cpf = addslashes($dados['cpf']);
-                    $cargo = addslashes($dados['cargo']);
-
-                   
+                    $cargo = addslashes($dados['cargo']);            
 
                     if(!empty($id) && !empty($nome) && !empty($email) && !empty($cpf) && !empty($cargo)){
                         //VERIFICAR SE O E-MAIL JÁ ESTÁ CADASTRADO
                         if($func->atualizarFuncionario($id, $nome, $email, $cpf, $cargo)){
                             echo "<p id='msg-att' class='msg-atualizado'> Alteração de cadastro feita com sucesso! </p>";
-                            header('Location:' . $_SERVER['PHP_SELF']);
-                            exit;
                         }
                     }else{
 
@@ -103,7 +99,7 @@
                             </div>
 
                             <div class="input-modal">
-                                <input type="text" id="nome" name="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>">
+                                <input type="text" id="nome" name="nome" value="<?php if(isset($update)){ echo $update['nome']; }?>" autocomplete="off">
                                 <input type="text" id="email" name="email" value="<?php if(isset($update)){ echo $update['email']; }?>">
                             </div>
                                                     
@@ -113,8 +109,8 @@
                             </div>
 
                             <div class="input-modal second">
-                                <input type="text" id="cpf" name="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>" onkeyup="mascara_cpf()" maxlength="14">
-                                <input type="text" id="cargo" name="cargo" value="<?php if(isset($update)){ echo $update['cargo']; }?>">
+                                <input type="text" id="cpf" name="cpf" value="<?php if(isset($update)){ echo $update['cpf']; }?>" onkeyup="mascara_cpf()" maxlength="14" autocomplete="off">
+                                <input type="text" id="cargo" name="cargo" value="<?php if(isset($update)){ echo $update['cargo']; }?>" autocomplete="off">
                             </div>
 
                         </div>
@@ -128,7 +124,6 @@
             </div>
             <script src="../javascript/validacao_cpf.js"></script>
         <?php }?>
-        <div class='load'></div>
         <script src="../javascript/script.js"></script>
     </body>  
 </html>

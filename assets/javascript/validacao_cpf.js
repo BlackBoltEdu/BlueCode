@@ -39,3 +39,16 @@ function isCPF(cpf = 0) {
         }
     }
 }
+
+function mascara_cpf(mascara, input){
+    // Tranformando em um vertor.
+    const vetMask = mascara.split("");
+    // PEGANDO SOMENTE NÚMEROS DIGITADOS PELO USUÁRIO E IGNORANDO LETRAS.
+    const numCpf = input.value.replace(/\D/g, "");
+    // Pegando a posição do cursor.
+    const cursor = input.selectionStart;
+    // Código da tecla assionada.
+    const teclado = (window.event) ? event.keyCode : event.which;
+
+    for (let i = 0; i<numCpf)
+}
